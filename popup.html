@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>밥 방해요소 차단기</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon-48.png" alt="" width="24" height="24">
+    <span class="brand">밥 방해요소 차단기</span>
+  </header>
+
+  <main>
+    <div class="shield" aria-hidden="true">
+      <svg viewBox="0 0 120 136">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop class="stop-a" offset="0"/><stop class="stop-b" offset="1"/></linearGradient></defs>
+        <path fill="url(#g)" d="M60 4 112 22v40c0 34-22 58-52 70C30 120 8 96 8 62V22Z"/>
+        <path class="shield-shine" d="M60 4 112 22v40c0 34-22 58-52 70Z"/>
+        <path class="mark-on" d="m38 68 15 15 30-32" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <g class="mark-off" fill="#fff"><rect x="44" y="48" width="10" height="40" rx="4"/><rect x="66" y="48" width="10" height="40" rx="4"/></g>
+      </svg>
+    </div>
+
+    <h1 id="status">보호 기능 활성화됨</h1>
+    <p id="site" class="site">급식 사이트</p>
+
+    <button id="toggle" type="button">보호 일시 중지</button>
+  </main>
+
+  <section class="stats">
+    <div class="stat">
+      <span class="num" id="page">–</span>
+      <span class="label">이 페이지에서 차단</span>
+    </div>
+    <div class="stat">
+      <span class="num" id="total">0</span>
+      <span class="label">총 차단한 광고</span>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://xn--rh3b.net" target="_blank">급식 사이트 열기</a>
+    <span id="version"></span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+:is(
+  aside[aria-label="광고"],
+  aside:has(ins.kakao_ad_area),
+  aside:has(ins.adsbygoogle),
+  aside:has(a[data-creative]),
+  aside:has(a[href^="mailto:"]),
+  aside:has(img[src*="/c/"]),
+  aside:has(img[src*="/ads/"]),
+  aside:has(iframe),
+  aside:has(> div[class*="h-[100px]"][class*="w-[320px]"]),
+  aside:has(> div[class*="h-[90px]"][class*="w-[728px]"]),
+  ins.kakao_ad_area,
+  ins.adsbygoogle,
+  iframe[src*="daumcdn"],
+  iframe[src*="doubleclick"],
+  iframe[src*="googlesyndication"],
+  iframe[id^="google_ads"],
+  img[src*="/c/"][src*="/narrow"],
+  img[src*="/c/"][src*="/wide"]
+):where(html:not(.bap-off) *) {
+  display: none !important;
+}

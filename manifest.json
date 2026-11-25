@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "밥 방해요소 차단기",
+  "version": "1.0.0",
+  "description": "일부 급식 사이트의 광고 배너를 숨겨 식단만 깔끔하게 보여 줍니다. 비공식 확장 프로그램이며 해당 사이트 운영자와 관련이 없습니다.",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://xn--rh3b.net/*",
+    "*://*.xn--rh3b.net/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "bap_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://xn--rh3b.net/*",
+        "*://*.xn--rh3b.net/*"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "밥 방해요소 차단기",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "short_name": "밥 차단기",
+  "minimum_chrome_version": "105",
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "daumcdn.net",
+        "ad.daum.net",
+        "kakao.com",
+        "kakaocdn.net",
+        "googlesyndication.com",
+        "doubleclick.net",
+        "googleadservices.com",
+        "adservice.google.com",
+        "adtrafficquality.google",
+        "googletagservices.com",
+        "criteo.com",
+        "criteo.net",
+        "taboola.com",
+        "outbrain.com",
+        "dable.io",
+        "mobon.net",
+        "adpnut.com",
+        "realssp.co.kr",
+        "ad-shield.io",
+        "adsappier.com",
+        "amazon-adsystem.com",
+        "adnxs.com",
+        "pubmatic.com",
+        "rubiconproject.com",
+        "media.net"
+      ],
+      "initiatorDomains": [
+        "xn--rh3b.net"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "regexFilter": "^https?://([a-z0-9-]+\\.)*xn--rh3b\\.net/(c|ads)/",
+      "resourceTypes": [
+        "image",
+        "media",
+        "sub_frame",
+        "xmlhttprequest",
+        "ping",
+        "other"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "xn--rh3b.net"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  }
+]
